@@ -1,17 +1,21 @@
 
-import './App.css';
-import Card from './components/UI/Card';
-import ExpenseItem from './components/Expenses/ExpenseItem';
-import { expenseprops } from './components/Expenses/expenseprops';
 import { useState } from 'react';
-function App() { 
-  return (
-    <Card className="max-w-full bg-gray-800 p-8 w-11/12 lg:w-3/4 h-auto mx-auto">
-      <div className=' md:col-start-3 md:col-span-8'>
-      {expenseprops.map((exp,ind)=><ExpenseItem id={ind} expenseprops={exp} key={exp.id}/>)}
-            </div>
+import './App.css';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
-    </Card>
+function App() { 
+  const appClass = 'max-w-full w-11/12 lg:w-3/4 mx-auto';
+  const onExpenseGet = (expense)=> {
+    return expense
+  }
+  const [expense,  setExpense] = useState()
+  return (
+    <div className={appClass}>
+      <NewExpense onExpenseGet= {onExpenseGet}/>
+      <Expenses/>
+    </div>
+    
   );
 }
 
