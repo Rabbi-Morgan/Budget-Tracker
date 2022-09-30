@@ -12,7 +12,7 @@ const NewExpense = ({onExpenseGet}) => {
     }
   return (
     <div>
-        <Card className='p2 bg-gray-900 h-auto'>
+    <Card className='p-2 bg-gray-900 h-auto'>
       <ExpenseForm onExpenseSubmit={bringExpense}/>
       </Card>
     </div>

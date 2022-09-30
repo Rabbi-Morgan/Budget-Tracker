@@ -13,6 +13,7 @@ function App() {
   const [expenseList,  setExpenseList] = useState(expenseprops)
   return (
     <div className={appClass}>
+      <h1 className='text-4xl text-center mt-12 text-white font-bold'>Budget Tracker</h1>
       <NewExpense onExpenseGet= {onExpenseGet}/>
       <Expenses expenseprops={expenseList}/>
     </div>

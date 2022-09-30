@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import { useState } from 'react';
 import ExpensesFilter from './ExpensesFilter';
+import ExpensesChart from './ExpensesChart';
 
 const Expenses = ({expenseprops}) => {
     const [filteredYear, setFilteredYear] = useState('2024');
@@ -15,6 +16,7 @@ const Expenses = ({expenseprops}) => {
     <Card className=" bg-gray-900 p-8  h-auto">
       <div className=' md:col-start-3 md:col-span-8'>
         <ExpensesFilter filt={filteredExpenses} selected={filteredYear} onChangeFilter={filterChangeHandler}/>
+        <ExpensesChart expenses={filteredExpenses}/>
         {filteredExpenses.length === 0 && <p className='pt-4 text-center text-white text-2xl'>No item found for this searched year </p>}
       {filteredExpenses.length >= 1 && filteredExpenses.map((exp,ind)=><ExpenseItem id={ind} expenseprops={exp} key={exp.id}/>)}
             </div>

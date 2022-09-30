@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const ExpenseForm = (props) => {
-    const inputClass = 'py-4 w-full px-2 rounded-md bg-gray-500 valid:border-green-300';
+    const inputClass = 'py-4  w-full px-2 rounded-md bg-gray-500 ';
     const labelClass = 'font-bold block mb-2';
 
     const [userInput, setUserInput] = useState({
@@ -29,7 +29,7 @@ const ExpenseForm = (props) => {
         const expData = {
             expenseTitle: userInput.enteredTitle,
             expenseDate: new Date(userInput.enteredDate),
-            expense: userInput.enteredAmount
+            expense: +userInput.enteredAmount
         }
         props.onExpenseSubmit(expData);
         setUserInput({
@@ -39,7 +39,7 @@ const ExpenseForm = (props) => {
         })
     }
     const [formStyle, setFormStyle] = useState({
-        formS: 'flex-wrap flex justify-between items-center',
+        formS: 'flex-wrap w-full flex justify-between items-center',
         butS: 'hidden mx-2 rounded-md py-2 px-4 bg-blue-800'
     })
     const cancelHandler=() => {
