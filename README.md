@@ -8,3 +8,6 @@ So to open the input , you click on the "Add New Expense" button
 When clicked, it opens a modal where you can input data; title ,date and amount. After inputing value in any input, use the tab key to focus on the next, or manually move your cursor to the next input.
 
 ![](images/expimage1.png)
+The chart shows the expense per month in relations to other expenses that year.
+
+![](images/expimage2.png)
