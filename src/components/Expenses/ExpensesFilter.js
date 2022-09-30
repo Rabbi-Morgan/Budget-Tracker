@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const ExpensesFilter = (props) => {
     const selectHandler = (e) => {
         props.onChangeFilter(e.target.value);
-        console.log(props.selected)
+        console.log(props.filt.length)
     }
     
   return (

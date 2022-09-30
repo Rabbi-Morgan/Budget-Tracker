@@ -8,7 +8,7 @@ const NewExpense = ({onExpenseGet}) => {
             ...expenseData,
             id: Math.random().toString()
         }
-        onExpenseGet(expenses)
+        onExpenseGet(expenses)   
     }
   return (
     <div>

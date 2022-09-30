@@ -3,17 +3,18 @@ import { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
+import { expenseprops} from './components/Expenses/expenseprops'
 
 function App() { 
   const appClass = 'max-w-full w-11/12 lg:w-3/4 mx-auto';
   const onExpenseGet = (expense)=> {
-    return expense
+    setExpenseList((prevState) => [expense, ...prevState])
   }
-  const [expense,  setExpense] = useState()
+  const [expenseList,  setExpenseList] = useState(expenseprops)
   return (
     <div className={appClass}>
       <NewExpense onExpenseGet= {onExpenseGet}/>
-      <Expenses/>
+      <Expenses expenseprops={expenseList}/>
     </div>
     
   );
