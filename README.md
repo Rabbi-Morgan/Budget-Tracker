@@ -3,5 +3,5 @@
 This is a single page expense tracker applicationthat takes different information about your particular expense; title, date and amount. It displays it in rich UI format
 
 So to open the input , you click on the "Add New Expense" button
-<img src='images/expimage3.png'>
+![](images/expimage3.png)
 
