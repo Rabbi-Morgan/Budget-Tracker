@@ -45,7 +45,7 @@ const ExpenseForm = (props) => {
     const cancelHandler=() => {
         setFormStyle({
             formS: formStyle.butS + ' hidden',
-            butS: 'mx-2 rounded-md py-2 px-4 bg-blue-800'
+            butS: 'bg-gradient-to-r from-cyan-500 to-blue-500 mx-2 rounded-md py-2 px-4 bg-blue-800'
         })
 }
 const addHandler=() => {
@@ -76,8 +76,8 @@ const addHandler=() => {
             </div>
         </div>
         <div className='p-4 self-end'>
-            <input type='button' onClick={cancelHandler} className='cursor-pointer mx-2 rounded-md py-2 px-4 bg-blue-800' value='Cancel'/> 
-            <button className='mx-2 rounded-md py-2 px-4 bg-blue-800' type='submit'>Add Expense</button>
+            <input type='button' onClick={cancelHandler} className='cursor-pointer mx-2 rounded-md py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500' value='Cancel'/> 
+            <button className='mx-2 rounded-md py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500' type='submit'>Add Expense</button>
         </div>
     </form>
     <div>

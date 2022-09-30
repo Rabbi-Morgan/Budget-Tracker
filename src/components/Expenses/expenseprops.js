@@ -22,5 +22,23 @@ export  const expenseprops = [
         expenseDate: new Date(2022,2,5),
         expenseTitle: 'New Desk(Wooden)',
         expense: 450
+    },
+     {
+        id: 4,
+        expenseDate: new Date(2021,5,5),
+        expenseTitle: 'Laptop',
+        expense: 1450
+    },
+     {
+        id: 4,
+        expenseDate: new Date(2021,4,5),
+        expenseTitle: 'Router(MTN)',
+        expense: 450
+    },
+     {
+        id: 4,
+        expenseDate: new Date(2023,7,5),
+        expenseTitle: 'Whiteboard',
+        expense: 32
     }
 ]
